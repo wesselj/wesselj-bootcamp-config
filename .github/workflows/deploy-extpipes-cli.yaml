@@ -18,14 +18,14 @@ jobs:
                       # CDF cluster, like bluefield or greenfield
                       CDF_CLUSTER: greenfield
                       # CDF Project name
-                      CDF_PROJECT: bootcamp-17-test
+                      CDF_PROJECT: bootcamp-01-test
                       # Azure AD tenant id
                       IDP_TENANT: 16e3985b-ebe8-4e24-9da4-933e21a9fc81
                     - environment: prod
                       # CDF cluster, like bluefield or greenfield
                       CDF_CLUSTER: greenfield
                       # CDF Project name
-                      CDF_PROJECT: bootcamp-17-prod
+                      CDF_PROJECT: bootcamp-01-prod
                       # Azure AD tenant id
                       IDP_TENANT: 16e3985b-ebe8-4e24-9da4-933e21a9fc81
 
@@ -35,7 +35,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
-            - uses: cognitedata/inso-extpipes-cli@main
+            - uses: cognitedata/inso-extpipes-cli@2.2.1
               env:
                   EXTPIPES_IDP_CLIENT_ID: ${{ secrets.CLIENT_ID }}
                   EXTPIPES_IDP_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
