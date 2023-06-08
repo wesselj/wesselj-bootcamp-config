@@ -40,19 +40,11 @@ rawdbs:
         pipelines:
         - source: csv
           schedule: On trigger
-  - rawdb-name: src:003:opcua:db
-    dataset-external-id: src:003:opcua:ds
-    short-name: oee
-    rawtables:
-      - rawtable-name: raw_timeseries
-        pipelines:
-        - source: csv
-          schedule: On trigger          
-  - rawdb-name: src:003:opcua:db
-    dataset-external-id: src:003:opcua:ds
-    short-name: oee
+  - rawdb-name: src:002:opcua:db
+    dataset-external-id: src:002:opcua:ds
+    short-name: opcua
     rawtables:
       - rawtable-name: datapoints
         pipelines:
-        - source: rest-api
-          schedule: On trigger
+          - source: ice-cream-api
+            schedule: On trigger
